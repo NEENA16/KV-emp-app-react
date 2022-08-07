@@ -7,10 +7,10 @@ import {useParams} from "react-router-dom";
 
 
 const EmployeeDetails =()=>{
-    const {id}= useParams();
+    // const {id}= useParams();
     // console.log("id=",id);
-    const { data, isLoading } = useGetEmployeeQuery(id);
-    console.log(data.data.role);
+    // const { data, isLoading } = useGetEmployeeQuery(id);
+    // (data)?console.log(data.data):console.log("EMpty");
     return(
 
         <div>
@@ -31,16 +31,16 @@ const EmployeeDetails =()=>{
                 <div className="emp-details">
                     <div className="emp-data">
                         <div className="emp-item">Employee Name</div>
-                        <div className="emp-data-db">{data.data.name}</div>
+                        <div className="emp-data-db">ssf</div>
                        {/* { console.log("name",{data.data.name})} */}
                     </div>
                     <div className="emp-data">
                         <div className="emp-item">Employee ID</div>
-                        <div className="emp-data-db">{data.data.Id}</div>
+                        <div className="emp-data-db">ssf</div>
                     </div>
                     <div className="emp-data">
                         <div className="emp-item">Joining Date</div>
-                        <div className="emp-data-db">{data.data.dateofjoining}</div>
+                        <div className="emp-data-db">ssf</div>
                     </div>
                     <div className="emp-data">
                         <div className="emp-item">Role</div>

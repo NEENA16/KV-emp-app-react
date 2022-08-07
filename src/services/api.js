@@ -8,7 +8,11 @@ export const empApi = createApi({
         }),
         getEmployee: builder.query({
             query: id =>`employee/${id}`,
-        })
+        }),
+        deleteEmployeeById: builder.mutation({
+            query: (id) => {
+                return ({ url: `employee/${id}`, method: 'DELETE'})}
+        }),
     }),
 })
-export const { useGetallEmployeeQuery,useGetEmployeeQuery} = empApi;
+export const { useGetallEmployeeQuery,useGetEmployeeQuery,useDeleteEmployeeByIdMutation} = empApi;

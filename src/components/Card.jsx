@@ -1,9 +1,20 @@
 import React from "react";
 import "../styles/Card.css";
 import {MdOutlineDelete,MdOutlineEdit} from "react-icons/md";
+import { useDeleteEmployeeByIdMutation } from '../services/api';
+
 
 const Cards = (props)=>{
       const {handleClick}=props;
+    //   const {handleDelete()}=props;
+        const [deleteEmployeeById] = useDeleteEmployeeByIdMutation();
+     const deleteFunction=(e)=>{
+        e.stopPropagation();
+        console.log("to delete id: ",props.empId);
+        deleteEmployeeById(props.empId);
+      };
+
+      
     return(
      
     <div className="card-style" onClick={ () => handleClick()}>
@@ -16,7 +27,7 @@ const Cards = (props)=>{
         </div>
         <div className="card-prop">{props.experience}</div>
         <div className="card-icon">
-            <MdOutlineDelete className="del-icon" />
+            <MdOutlineDelete className="del-icon" onClick={(e)=>{deleteFunction(e);}}/>
             <MdOutlineEdit className="edit-icon" />
         </div>
     </div>

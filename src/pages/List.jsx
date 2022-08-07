@@ -14,11 +14,11 @@ const List = () => {
         navigate('/Create');
     };
     const goToDetailsPage=(id)=>{
-        console.log("newdata=",id);
+        // console.log("newdata=",id);
         navigate(`/list/${id}`);
     };
     const { data, error, isLoading } = useGetallEmployeeQuery()
-    console.log(data);
+    // console.log(data);
     // const empArr =[
     //     {
     //         name: 'Vishal M',
@@ -99,7 +99,7 @@ const List = () => {
                     <div className='list-heading-item'>Action</div>
                 </div>
                 {data?.data.map((Item) =>{
-                    console.log("data=",Item.id)
+                    // console.log("data=",Item.id)
                     return(
                             <Cards
                           name={Item.name}
