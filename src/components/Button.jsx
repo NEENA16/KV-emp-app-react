@@ -1,9 +1,9 @@
 
 //controlled component
 const Button = (props) => {
-    const {id,type,label, handleClick} = props;   //destructring
+    const {id,type,label,className, handleClick} = props;   //destructring
     return (
-        <button id={id} type={type} onClick={ () => handleClick()}> {label} </button>
+        <button id={id} className={className} type={type} onClick={ () => handleClick()}> {label} </button>
     );
 }
 export default Button;

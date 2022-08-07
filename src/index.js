@@ -8,19 +8,26 @@ import EmployeeList from './pages/EmployeeList';
 import CreateEmployee from './pages/CreateEmployee';
 import Login from './pages/Login';
 import List from './pages/List';
+import Counter from './pages/Counter';
+import { Provider } from 'react-redux';
+import {store} from './store/store'
+import EmployeeDetails from './pages/EmployeeDetails';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Provider store={store}>
         <Routes>
-          <Route path="/" element = 
-          {<Login />} />
-          <Route path="/list" 
-          element={<List />} />
-          <Route path="/create"
-          element={<CreateEmployee />} />
+          <Route path="/" element = {<Login />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/create" element={<CreateEmployee />} />
+          {/* <Route path="/details" element={<EmployeeDetails />} /> */}
+          <Route path="/counter" element={<Counter/>} />
+          <Route path="/list/:id" element={<EmployeeDetails/>}/>
         </Routes>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

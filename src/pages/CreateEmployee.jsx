@@ -3,66 +3,84 @@ import {useNavigate} from 'react-router-dom';
 import InputSelect from "../components/InputSelect";
 import Button from "../components/Button";
 import "../styles/Styles.css";
-import TextField from "../components/TextField";
 import SideNavigation from "../components/SideNavigation";
+import {useEffect, useState} from "react";
 
-
+   
 const CreateEmployee = ()=> {
+    const navigate = useNavigate();
+    const goToNextPage = () =>{
+        navigate('/');
+    };
+    const [state, setState] = useState({
+        name: "",
+        eid: "",
+        jdate: " ",
+        role: " ",
+        status: " ",
+        exp: " ",
+    }
+    );
+
+    const onChangeValue = (key, value) => {
+        setState({
+            ...state,
+            [key]: value
+        })
+    }
+
+    useEffect(()=>{
+        console.log(state)
+    },[state])
+
     return(
     <div>
         <SideNavigation/>
         <main>
-            <section class="blank">
-
-            </section>
-            <section class="heading">
+            <div className="heading">
                 <h1>Create Employee</h1>
-            </section>
+            </div>
             <section class="form">
         <form name="form">
             <div className="data1">
                 <label for="ename">Employee Name</label><br/>
-                {/* <input className ="tag1" id="name" type="text" placeholder="Employee Name" name="name"/> */}
-
-                <InputField className="tag1" id="name" type="text" placeholder="Employee Name" name="name" />
+                <InputField className="tag1" id="name" type="text" placeholder="Employee Name" name="name" onChange={(value) => onChangeValue("name", value)} />
             </div>
             <div className="data1">
                 <label for="eid">Employee ID</label><br/>
-                {/* <input className="tag1" id="eid" type="text" placeholder="Employee ID" name="eid" /> */}
-                <InputField  className="tag1" id="eid" type="text" placeholder="Employee ID" name="eid" />
+                <InputField  className="tag1" id="eid" type="text" placeholder="Employee ID" name="eid" onChange={(value)=> onChangeValue ("eid",value)}/>
             </div>
             <div className="data1">
                <label for="jdate">Joining Date</label><br/>
-               {/* <input className= "tag1" id="jdate" type="text" placeholder="Joining Date" name="jdate"/> */}
-               <InputField  className="tag1" id="eid" type="text" placeholder="Joining Date" name="jdate" />
+               <InputField  className="tag1" id="jdate" type="text" placeholder="Joining Date" name="jdate" onChange={(value)=> onChangeValue("jdate",value)}/>
             </div>
             <div className="data1">
                 <label for="role">Role</label><br/>
-                {/* <select className="tag1">
-                   <option>Choose Role</option>
-                   <option>Developer</option>
-                   <option>QA</option>
-                   <option>Designer</option>
-                 </select> */}
-                 <InputSelect  options={[{key:"Dev",label:"Developer"},{key:"QA",label:"QA"}]} />
+                 <InputSelect 
+                        className="tag1" i
+                        d="role" 
+                        options={[
+                                {key:"ad",label:"Admin"},
+                                {key:"HR",label:"HR"}]}  
+                                onChange={(value)=> onChangeValue("role",value)}/>
             </div> 
             <div className="data1">
               <label for="status">Status</label><br/>
-              {/* <select className="tag1">
-                  <option>Status</option>
-                  <option>Training</option>
-                  <option>Onboard</option>
-              </select> */}
-               <InputSelect  options={[{key:"train",label:"Trainig"},{key:"on",label:"Onboard"}]}  />
+               <InputSelect 
+                    className="tag1" 
+                    id="status" 
+                    options={[
+                        {key:"act",label:"Active"},
+                        {key:"in",label:"Inactive"},
+                        {key:"prob",label:"Probation"}]} 
+                        onChange={(value)=> onChangeValue("status",value)} />
             </div>
             <div className="data1">
                  <label for="experience">Experience</label><br/>
-                 {/* <input className="tag1" id="exp" type="text" placeholder="Experience" name="exp"/> */}
-                  <InputField  className="tag1" id="eid" type="text" placeholder="Experience" name="exp" /><br/>
+                  <InputField  className="tag1" id="exp" type="text" placeholder="Experience" name="exp" onChange={(value)=> onChangeValue("exp",value)}/><br/>
              </div>
             <div className="data1">
                 <label for="address">Address</label><br/>
-               {/* <input className="tag2" type="text" placeholder="Address"/> */}
                <InputField  className="tag2" type="text" placeholder="Address"/>
             </div>
           <div className="data1">
@@ -77,9 +95,10 @@ const CreateEmployee = ()=> {
         </div>
         <div className="button">
             {/* <button id="submit" type="submit" onclick = " return formValidate()" >Create</button> */}
-            <Button id="submit" type="submit" label="Create" />
+            <Button className="button-style" id="submit" type="submit" label="Create" />
             {/* <button id="cancel" type="button">Cancel</button> */}
-            <Button id="submit" type="submit" label="Cancel" />
+            <Button className="button-style" id="submit" type="submit" label="Cancel" handleClick={goToNextPage}/>
+
         </div>
     </form>
     
