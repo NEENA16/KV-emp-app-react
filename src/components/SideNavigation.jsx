@@ -14,7 +14,7 @@ const SideNavigation = ({}) =>{
                          <img src={list}/>
                      </div>
                      <div className="elist">
-                            <p>Employee List</p>
+                            <a href="/list">Employee List</a>
                      </div>
                 </div>
          </aside>

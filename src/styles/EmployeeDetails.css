@@ -59,11 +59,26 @@ hr{
 }
 .emp-status{
     border-radius: 90px;
-    background-color: red;
+    /* background-color: red; */
     width: 70%;
     text-align: center;
     padding: 6px;
     color: #183077;
+}
+.Active{
+    background-color: #D3F4BE;
+    padding-left:30px;
+    padding-right: 30px;
+}
+.Probation{
+    background-color: #F5ECB8;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.Inactive{
+    background-color: #FFBFBF;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .active{
     background-color: #D3F4BE;

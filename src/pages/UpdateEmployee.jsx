@@ -5,33 +5,37 @@ import Button from "../components/Button";
 import "../styles/Styles.css";
 import SideNavigation from "../components/SideNavigation";
 import {useEffect, useState} from "react";
-import { useCreateEmployeeMutation } from '../services/api';
+import { useGetallEmployeeQuery, useUpdateEmployeeMutation } from '../services/api';
    
 const UpdateEmployee = ()=> {
     // const employeecreate=(emp)=>{
     //     CreateEmployee(emp);
     //   };
 
-    // const[createfunction, result] = useCreateEmployeeMutation()
+    const {id} = useParams();
+    const {data,isLoading} = useGetallEmployeeQuery();
+    const[updatefunction, result] = useUpdateEmployeeMutation(id);
 
     const navigate = useNavigate();
     const goToNextPage = () =>{
         navigate('/');
     };
-    const [state, setState] = useState({
-        name: "",
-        // eid: "",
-        jdate: " ",
-        role: " ",
-        status: " ",
-        exp:Number(" "),
-        line1: " ",
-        line2: " ",
-        city: " ",
-        state: " ",
-        pin: Number(" ")
-    }
-    );
+    // const [state, setState] = useState({
+    //     if(data){
+    //         name: state.name,
+    //         // eid: "",
+    //         jdate: state.jdate,
+    //         role: state.role,
+    //         status: state.status,
+    //         exp: state.exp Number(" "),
+    //         line1: state.address.line1,
+    //         line2: state.address.line2,
+    //         city: state.address.city,
+    //         state: state.address.state,
+    //         pin: state.address.Number(pin)
+    //     }
+    // }
+    //);
 
     const onChangeValue = (key, value) => {
         setState({
@@ -126,7 +130,7 @@ const UpdateEmployee = ()=> {
         </div>
         <div className="button">
             {/* <button id="submit" type="submit" onclick = " return formValidate()" >Create</button> */}
-            <Button className="button-style" id="submit" type="submit" label="Create" handleClick={()=>createfunction({
+            <Button className="button-style" id="submit" type="submit" label="Create" handleClick={()=>updatefunction({
                 name: state.name,
                 dateofjoining: state.jdate,
                 role: state.role,

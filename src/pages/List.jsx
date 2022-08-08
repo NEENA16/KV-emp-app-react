@@ -15,7 +15,7 @@ const List = () => {
     // };
     const goToNextPage=(id)=>{
         // console.log("newdata=",id);
-        navigate(`/list/${id}`);
+        navigate(`/detail/${id}`);
     };
     const { data, error, isLoading } = useGetallEmployeeQuery()
     // console.log(data);

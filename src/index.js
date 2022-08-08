@@ -25,7 +25,8 @@ root.render(
           <Route path="/create" element={<CreateEmployee />} />
           {/* <Route path="/details" element={<EmployeeDetails />} /> */}
           <Route path="/counter" element={<Counter/>} />
-          <Route path="/list/:id" element={<EmployeeDetails/>}/>
+          <Route path="/detail/:id" element={<EmployeeDetails/>}/>
+          <Route path="/:id/edit" element={<CreateEmployee/>} ></Route>
         </Routes>
       </Provider>
     </BrowserRouter>

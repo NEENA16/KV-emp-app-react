@@ -9,7 +9,7 @@
     border-radius: 5px;
     margin: 5px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     box-shadow: 0px 3px 6px #9D9D9D29
 }
 .card-prop{
@@ -35,17 +35,17 @@
     width: 120px;
     text-align: center;
 }
-.active{
+.Active{
     background-color: #D3F4BE;
     padding-left:30px;
     padding-right: 30px;
 }
-.probation{
+.Probation{
     background-color: #F5ECB8;
     padding-left: 17px;
     padding-right: 17px;
 }
-.inactive{
+.Inactive{
     background-color: #FFBFBF;
     padding-left: 25px;
     padding-right: 25px;
@@ -62,8 +62,10 @@
 }
 .edit-icon{
     color:#10AAC0;
-    font-size:1.3rem;
+    font-size:1.8rem;
     margin-left: 2px;
+    /* height: 200px; */
+    /* width: 200px; */
     /* width: 50px; */
     /* padding-left: 6px; */
 }
