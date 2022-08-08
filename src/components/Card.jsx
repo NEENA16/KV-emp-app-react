@@ -10,7 +10,7 @@ const Cards = (props)=>{
         const [deleteEmployeeById] = useDeleteEmployeeByIdMutation();
      const deleteFunction=(e)=>{
         e.stopPropagation();
-        console.log("to delete id: ",props.empId);
+        // console.log("to delete id: ",props.empId);
         deleteEmployeeById(props.empId);
       };
 

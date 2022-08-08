@@ -9,11 +9,11 @@ const SideNavigation = ({}) =>{
     <nav>
          <img id="logo" src={logo} alt="keyvalue logo"/>
         <aside>
-                <div class="tile">
-                     <div class="imagebg">
+                <div className="tile">
+                     <div className="imagebg">
                          <img src={list}/>
                      </div>
-                     <div class="elist">
+                     <div className="elist">
                             <p>Employee List</p>
                      </div>
                 </div>

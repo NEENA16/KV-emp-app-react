@@ -36,7 +36,7 @@ main{
     height: 450;
     margin-right: 25px;;
 }
-form {
+.form-div {
    display: flex;
    flex-wrap: wrap;
 }

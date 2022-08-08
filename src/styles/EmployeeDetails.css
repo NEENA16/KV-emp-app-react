@@ -7,13 +7,25 @@
     background-color: #eaf9f9;
     margin-right: 25px;
     width: 8%;
+    height: 50%;
     border-radius: 80px;
 }
 .edit-icon-span{
     background-color: #03AEEE;
-    width: 30%;
+    width: 35%;
+    display: flex;
     border-radius: 100px;
     color: #fff;
+    align-items: center ;
+    justify-content: center;
+}
+.edit-content{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    font-size: 1.1rem;
+    color: #000;
+    opacity: 0.6;
 }
 .emp-details{
     display: flex;
@@ -48,7 +60,23 @@ hr{
 .emp-status{
     border-radius: 90px;
     background-color: red;
+    width: 70%;
     text-align: center;
     padding: 6px;
     color: #183077;
+}
+.active{
+    background-color: #D3F4BE;
+    padding-left:30px;
+    padding-right: 30px;
+}
+.probation{
+    background-color: #F5ECB8;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.inactive{
+    background-color: #FFBFBF;
+    padding-left: 25px;
+    padding-right: 25px;
 }

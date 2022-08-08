@@ -10,10 +10,10 @@ import InputSelect from '../components/InputSelect';
 
 const List = () => {
     const navigate = useNavigate();
-    const goToNextPage = () =>{
-        navigate('/Create');
-    };
-    const goToDetailsPage=(id)=>{
+    // const goToNextPage = () =>{
+    //     navigate('/Create');
+    // };
+    const goToNextPage=(id)=>{
         // console.log("newdata=",id);
         navigate(`/list/${id}`);
     };
@@ -108,7 +108,7 @@ const List = () => {
                           role={Item.role}
                           status={Item.status}
                           experience={Item.experience}
-                          handleClick={()=>goToDetailsPage(Item.id)}
+                          handleClick={()=>goToNextPage(Item.id)}
                         /> 
                     );
                 })}

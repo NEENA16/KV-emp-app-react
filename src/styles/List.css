@@ -21,7 +21,7 @@
     display: flex;
     background: #EAF9FF 0% 0% no-repeat padding-box;
     border-radius: 90px 90px;
-    cursor: pointer;
+    /* cursor: pointer; */
     text-decoration: none;
     color:#1F1F1F;
 }

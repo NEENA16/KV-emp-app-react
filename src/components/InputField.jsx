@@ -1,5 +1,5 @@
 import "../styles/Styles.css";
-const InputField = ({label,onChange,defaultvalue,placeholder,id,className,type,name})=> {
+const   InputField = ({label,onChange,defaultvalue,placeholder,id,className,type,name})=> {
     return (
         <div>
             <label>{label}</label>
