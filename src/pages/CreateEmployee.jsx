@@ -82,17 +82,10 @@ const CreateEmployee = ()=> {
                 status: state.status,
                 experience: state.exp,
                 departmentId: "cbe8303f-f240-4dc1-8d22-3feb48efaf6b",
-                // username: "roshan123",
-                // password: "pass123",
                 username: state.username,
                 password: state.password,
                 id: String(state.id),
                 address:{
-                    // line1: "house6",
-                    // line2: "lane6",
-                    // city: "ptnma",
-                    // state: "delhi",
-                    // pin: 123456
                     line1: state.line1,
                     line2: state.line2,
                     city: state.city,

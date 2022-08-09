@@ -46,3 +46,14 @@ div.imagebg >img {
     padding: 10px 10px 20px 20px; 
     margin-bottom: 15px;
 }
+
+.logout{
+    background-color: #03AEEE;
+    border-radius: 5px;
+    margin-top: 300%;
+    margin-left: 25%;
+    width: 120px;
+    height: 45px;
+    /* font-size: 1em; */
+    color: #fff;
+}

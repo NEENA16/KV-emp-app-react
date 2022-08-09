@@ -13,9 +13,9 @@ const Cards = (props)=>{
         e.stopPropagation();
         deleteEmployeeById(props.empId);
       };
-      const goToNextPage = (e) =>{
+      const goToNextPage = (e,id) =>{
         e.stopPropagation();
-        navigate(`/${id}/edit`);
+        navigate(`/edit/${id}`);
     };
 
       
@@ -32,7 +32,7 @@ const Cards = (props)=>{
         <div className="card-prop">{props.experience}</div>
         <div className="card-icon">
             <MdOutlineDelete className="del-icon" onClick={(e)=>{deleteFunction(e);}}/>
-            <MdOutlineEdit className="edit-icon" onClick={(e)=>{goToNextPage(e)}}/>
+            <MdOutlineEdit className="edit-icon" onClick={(e)=>{goToNextPage(e,props.empId)}}/>
         </div>
     </div>
     );

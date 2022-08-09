@@ -23,13 +23,14 @@
     border-radius: 90px 90px;
     /* cursor: pointer; */
     text-decoration: none;
+    width: 30x;
     color:#1F1F1F;
 }
 .create-emp div{
     padding: 15px;
     padding-bottom: 1px;
     padding-right: 20px;
-    font-size: 13px;
+    font-size: 1em;
 }
 .create-emp-plus{
     color: white;

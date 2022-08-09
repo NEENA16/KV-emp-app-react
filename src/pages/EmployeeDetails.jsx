@@ -14,7 +14,7 @@ const EmployeeDetails =()=>{
 
     const navigate = useNavigate();
     const goToNextPage = () =>{
-        navigate(`/${id}/edit`);
+        navigate(`/edit/${id}`);
     };
     return(
 
