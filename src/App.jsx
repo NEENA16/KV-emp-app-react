@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from './components/Button';
-import InputField from './components/InputField';
+import Button from './components/button/Button';
+import InputField from './components/input-field/InputField';
 import { useState } from 'react';
 import TextField from './components/TextField';
 import {useEffect } from 'react';
-import CreateEmployee from './pages/CreateEmployee';
+import CreateEmployee from './pages/create-employee/CreateEmployee';
 
 
 function App() {

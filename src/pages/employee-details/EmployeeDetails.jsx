@@ -1,10 +1,11 @@
-import SideNavigation from "../components/SideNavigation";
-import "../styles/EmployeeDetails.css";
+import SideNavigation from "../../components/side-navigation/SideNavigation";
+import "./EmployeeDetails.css";
 import{Link} from "react-router-dom"
 import {MdOutlineEdit} from "react-icons/md";
-import { useGetEmployeeQuery } from '../services/api';
+// import { useGetEmployeeQuery } from '../../services/BaseApi';
 import {useParams} from "react-router-dom";
 import {useNavigate} from 'react-router-dom'
+import { useGetEmployeeQuery } from "./EmployeeDetailsApi";
 
 const EmployeeDetails =()=>{
     const {id}= useParams();

@@ -1,4 +1,4 @@
-import "../styles/Styles.css";
+// import "../styles/Styles.css";
 const InputSelect = ({
     label,options,onChange,className,defaultvalue
 }) => {

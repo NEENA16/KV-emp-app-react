@@ -10,7 +10,7 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import {empApi} from '../services/api'
+import {empApi} from '../services/BaseApi'
 
 export const store = configureStore({
   reducer: {

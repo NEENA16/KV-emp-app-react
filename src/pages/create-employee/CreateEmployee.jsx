@@ -1,12 +1,13 @@
-import InputField from "../components/InputField";
+import InputField from "../../components/input-field/InputField";
 import {useNavigate} from 'react-router-dom';
-import InputSelect from "../components/InputSelect";
-import Button from "../components/Button";
-import "../styles/Styles.css";
-import SideNavigation from "../components/SideNavigation";
+import InputSelect from "../../components/input-select/InputSelect";
+import Button from "../../components/button/Button";
+import "./Styles.css";
+import SideNavigation from "../../components/side-navigation/SideNavigation";
 import {useEffect, useState} from "react";
-import { useCreateEmployeeMutation, useGetEmployeeQuery,useUpdateEmployeeMutation } from '../services/api';
+// import { useCreateEmployeeMutation, useGetEmployeeQuery,useUpdateEmployeeMutation } from '../../services/BaseApi';
 import {useParams} from "react-router-dom"
+import { useCreateEmployeeMutation, useGetEmployeeQuery, useUpdateEmployeeMutation } from "./CreateEmployeeApi";
    
 const CreateEmployee = ()=> {
     // const employeecreate=(emp)=>{
@@ -37,14 +38,14 @@ const CreateEmployee = ()=> {
         dateofjoining: "",
         role: "",
         status: "",
-        exp:Number(""),
+        exp:"",
         line1: "",
         line2: "",
         city: "",
         state: "",
         username:"",
         password:"",
-        pin: Number("")
+        pin: ""
     }
     );
 
@@ -63,12 +64,12 @@ const CreateEmployee = ()=> {
                 dateofjoining: employeeDetails?.data?.dateofjoining,
                 role: employeeDetails?.data?.role,
                 status: employeeDetails?.data?.status,
-                exp: employeeDetails?.data?.experience,
+                exp: Number(employeeDetails?.data?.experience),
                 line1: employeeDetails?.data?.address.line1,
                 line2: employeeDetails?.data?.address.line2,
                 city: employeeDetails?.data?.address.city,
                 state: employeeDetails?.data?.address.state,
-                pin: employeeDetails?.data?.address.pin,
+                pin: Number(employeeDetails?.data?.address.pin),
                 username: employeeDetails?.data?.username,
                 password: employeeDetails?.data?.password
             })

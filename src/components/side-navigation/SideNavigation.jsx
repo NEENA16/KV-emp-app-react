@@ -1,9 +1,9 @@
-import logo from "../images/kv logo.png"
-import list from "../images/List.png"
-import "../styles/SideNavigation.css";
-import Button from "./Button";
+import logo from "../../images/kvlogo.png"
+import list from "../../images/List.png"
+import "./SideNavigation.css";
+import Button from "../button/Button";
 import {useNavigate} from "react-router-dom"
-import { removeStorage } from "../services/util";
+import { removeStorage } from "../../services/util";
 
 const SideNavigation = ({}) =>{
 

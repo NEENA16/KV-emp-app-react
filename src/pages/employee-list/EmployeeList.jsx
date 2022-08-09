@@ -1,10 +1,11 @@
 import {Link,useNavigate} from 'react-router-dom'
-import Button from '../components/Button';
-import Cards from '../components/Card';
-import SideNavigation from "../components/SideNavigation";
-import "../styles/List.css";
-import { useGetallEmployeeQuery } from '../services/api';
-import InputSelect from '../components/InputSelect';
+import Button from '../../components/button/Button';
+import Cards from '../../components/card/Card';
+import SideNavigation from "../../components/side-navigation/SideNavigation";
+import "./EmployeeList.css";
+// import { useGetallEmployeeQuery } from '../../services/BaseApi';
+import InputSelect from '../../components/input-select/InputSelect';
+import { useGetallEmployeeQuery } from './EmployeeListApi';
 
 
 

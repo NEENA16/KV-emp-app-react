@@ -1,8 +1,9 @@
 import React from "react";
-import "../styles/Card.css";
+import "./Card.css";
 import {MdOutlineDelete,MdOutlineEdit} from "react-icons/md";
-import { useDeleteEmployeeByIdMutation,useUpdateEmployeeMutation } from '../services/api';
+// import { useDeleteEmployeeByIdMutation,useUpdateEmployeeMutation } from '../../services/BaseApi';
 import {useNavigate,useParams} from 'react-router-dom'
+import { useDeleteEmployeeByIdMutation } from "./CardApi";
 
 const Cards = (props)=>{
       const {handleClick}=props;
